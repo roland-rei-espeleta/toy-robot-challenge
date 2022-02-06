@@ -37,12 +37,12 @@ The toy robot must not fall off the table during movement. This also includes th
 move that would cause the robot to fall must be ignored.
 
 
-####Setup :
+###Setup :
 
 1. Install Java 8 and Gradle 6.x.x on your machine.
 2. Open Gradle Project with your Code Editor ( **IntelliJ** )
 
-#### Running the app
+### Running the app
 
 1. Execute gradle task ```:run```.
 2. The console application will request for a filename where the commands are located.
