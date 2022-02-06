@@ -1,0 +1,6 @@
+com.iress.toyrobot
+com.iress.toyrobot.common
+com.iress.toyrobot.common.commands
+com.iress.toyrobot.common.exceptions
+com.iress.toyrobot.file
+com.iress.toyrobot.file.exceptions

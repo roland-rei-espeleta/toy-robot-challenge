@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id "application"
+}
+
+apply plugin : "java"
+
+ext {
+    javaMainClass = "com.iress.toyrobot.ToyRobotMainClass"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+run {
+    standardInput = System.in
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'org.mockito:mockito-inline:3.12.4'
+    testImplementation 'org.mockito:mockito-junit-jupiter:3.12.4'
+}
+
+test {
+    useJUnitPlatform()
+}

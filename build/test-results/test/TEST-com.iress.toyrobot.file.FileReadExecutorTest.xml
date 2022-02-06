@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.iress.toyrobot.file.FileReadExecutorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-02-06T06:26:26" hostname="wfglc-respeleta" time="0.602">
+  <properties/>
+  <testcase name="testFileReadIfExecuteIsCalledForExampleB()" classname="com.iress.toyrobot.file.FileReadExecutorTest" time="0.583"/>
+  <testcase name="testFileReadIfExecuteIsCalledForExistingFiles()" classname="com.iress.toyrobot.file.FileReadExecutorTest" time="0.003"/>
+  <testcase name="testExecuteIfExceptionThrownForNonExistentFiles()" classname="com.iress.toyrobot.file.FileReadExecutorTest" time="0.004"/>
+  <testcase name="testExecuteIfFileNameIsEmpty()" classname="com.iress.toyrobot.file.FileReadExecutorTest" time="0.002"/>
+  <testcase name="verifyFileReadIfExecuteIsCalledForExampleC()" classname="com.iress.toyrobot.file.FileReadExecutorTest" time="0.005"/>
+  <system-out><![CDATA[Enter commands filename : Command executed : PLACE
+Command executed : LEFT
+Command executed : REPORT
+0,0,WEST
+Enter commands filename : Command executed : PLACE
+Command not executed : ERROR
+Invalid command!!! Command : RawCommand{command='MOVE2'}
+Command executed : REPORT
+0,0,NORTH
+Enter commands filename : Command filename not found! : URL Resource not found!
+Enter commands filename : Enter commands filename : Command not executed : MOVE
+Command not executed : LEFT
+Command not executed : RIGHT
+Command executed : PLACE
+Command executed : MOVE
+Command executed : MOVE
+Command executed : LEFT
+Command executed : MOVE
+Command executed : MOVE
+Command not executed : MOVE
+Robot will fall off with the move command!
+Command not executed : MOVE
+Robot will fall off with the move command!
+Command not executed : MOVE
+Robot will fall off with the move command!
+Command executed : REPORT
+3,4,NORTH
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
