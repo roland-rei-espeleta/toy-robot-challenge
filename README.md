@@ -52,8 +52,10 @@ move that would cause the robot to fall must be ignored.
 4. The app will execute the commands and log the output on the console.
 * **Sample output** : ```1,1,NORTH```
 
-####Tests :
-Dependencies : **Mockito**, **JUnit**
+### Tests :
+Dependencies : 
+   * **Mockito**
+   * **JUnit**
 
 
 
