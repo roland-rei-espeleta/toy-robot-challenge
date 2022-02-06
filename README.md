@@ -11,10 +11,13 @@ from falling to destruction. Any movement that would result in the robot falling
 however further valid movement commands must still be allowed.
 
 Create a  **console application** that can read in commands of the following form -
-####PLACE X,Y,F
-####MOVE
-####LEFTRIGHT
-####REPORT
+```
+PLACE X,Y,F
+MOVE
+LEFT
+RIGHT
+REPORT
+```
 
 **PLACE** will put the toy robot on the table in position X,Y and facing **NORTH**, **SOUTH**, **EAST** or **WEST**. The origin **(0,0)**
 can be considered to be the **SOUTH WEST** most corner. It is required that the first command to the robot is a **PLACE**
