@@ -1,88 +1,0 @@
-3Enter commands filename : Command executed : PLACE
-Command executed : LEFT
-Command executed : REPORT
-	0,0,WEST
-3Enter commands filename : Command executed : PLACE
-Command not executed : ERROR
-9Invalid command!!! Command : RawCommand{command='MOVE2'}
-Command executed : REPORT
-
-0,0,NORTH
-PEnter commands filename : Command filename not found! : URL Resource not found!
-Enter commands filename : 6Enter commands filename : Command not executed : MOVE
-Command not executed : LEFT
-Command not executed : RIGHT
-Command executed : PLACE
-Command executed : MOVE
-Command executed : MOVE
-Command executed : LEFT
-Command executed : MOVE
-Command executed : MOVE
-Command not executed : MOVE
-+Robot will fall off with the move command!
-Command not executed : MOVE
-+Robot will fall off with the move command!
-Command not executed : MOVE
-+Robot will fall off with the move command!
-Command executed : REPORT
-
-3,4,NORTH
-Command executed : PLACE
-Command executed : MOVE
-Command executed : REPORT
-
-0,1,NORTH
-	Command executed : PLACE
-	Command executed : LEFT
-	Command executed : REPORT
-		0,0,WEST
-
-Command executed : PLACE
-
-Command executed : MOVE
-
-Command executed : MOVE
-
-Command executed : LEFT
-
-Command executed : MOVE
-
-Command executed : REPORT
-
-
-3,3,NORTH
-Command not executed : RIGHT
-Command not executed : MOVE
-Command executed : PLACE
-Command executed : MOVE
-Command executed : MOVE
-Command executed : LEFT
-Command executed : MOVE
-Command executed : REPORT
-
-3,3,NORTH
-Command executed : PLACE
-Command executed : MOVE
-Command executed : PLACE
-Command executed : REPORT
-	3,3,EAST
-Command executed : REPORT
-
-1,1,NORTH
-Command not executed : REPORT
-Robot not placed!
-Command executed : MOVE
-Command executed : MOVE
-Command not executed : MOVE
-+Robot will fall off with the move command!
-Command executed : MOVE
-Command executed : MOVE
-Command not executed : MOVE
-Command executed : RIGHT
-Command not executed : RIGHT
-Command executed : PLACE
-Command not executed : PLACE
-Command executed : PLACE
-Command executed : PLACE
-! Command executed : LEFT
-!"Command not executed : LEFT
