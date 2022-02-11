@@ -1,15 +1,12 @@
 package com.iress.toyrobot.file;
 
 import com.iress.toyrobot.common.CommandExecutor;
-import com.iress.toyrobot.common.RawCommand;
+import com.iress.toyrobot.common.CommandLoader;
 import com.iress.toyrobot.common.ReaderExecutor;
 import com.iress.toyrobot.common.exceptions.ToyRobotException;
 import com.iress.toyrobot.file.exceptions.FileReadException;
 
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Scanner;
 
 public class FileReadExecutor implements ReaderExecutor {
@@ -25,13 +22,13 @@ public class FileReadExecutor implements ReaderExecutor {
 
     @Override
     public void execute() throws ToyRobotException {
-        CommandExecutor commandExecutor = new CommandExecutor(getReader().read());
+        CommandExecutor commandExecutor = new CommandExecutor(getReader().readCommands());
         commandExecutor.execute();
     }
 
     @Override
-    public FileReader getReader() {
-        FileReader fileReader = new FileReader();
+    public FileCommandReader getReader() {
+        FileCommandReader fileReader = new FileCommandReader();
         String filename;
         System.out.print("Enter commands filename : ");
         filename = getFileName();
@@ -52,30 +49,17 @@ public class FileReadExecutor implements ReaderExecutor {
         }
     }
 
-    private void readFile(FileReader fileReader, String filename) {
+    private void readFile(FileCommandReader fileReader, String filename) throws ToyRobotException {
 
         try {
-            loadFile(fileReader, filename);
+            CommandLoader loader = new FileCommandLoader(fileReader, filename);
+            loader.addCommands();
         } catch (FileReadException exception) {
             System.out.println("Command filename not found! : " + exception.getMessage());
             throw new ToyRobotException("Toy Robot Failed!");
         } catch(IOException exception) {
             System.out.println("Command file invalid! : " + exception.getMessage());
             throw new ToyRobotException("Toy Robot Failed!");
-        }
-    }
-
-    private void loadFile(FileReader fileReader, String filename) throws FileReadException, IOException{
-        ClassLoader classLoader = getClass().getClassLoader();
-        URL url = classLoader.getResource(filename);
-        if(url == null) {
-            throw new FileReadException("URL Resource not found!");
-        }
-        File file = new File(url.getPath());
-        BufferedReader reader = new BufferedReader(new java.io.FileReader(file));
-        String line;
-        while ((line = reader.readLine()) != null) {
-            fileReader.addCommand(new RawCommand(line));
         }
     }
 }

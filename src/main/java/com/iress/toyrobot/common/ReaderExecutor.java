@@ -4,7 +4,7 @@ import com.iress.toyrobot.common.exceptions.ToyRobotException;
 
 public interface ReaderExecutor {
 
-    Reader getReader();
+    CommandReader getReader();
 
     void execute() throws ToyRobotException;
 }

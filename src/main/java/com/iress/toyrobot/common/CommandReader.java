@@ -2,9 +2,9 @@ package com.iress.toyrobot.common;
 
 import java.util.List;
 
-public interface Reader {
+public interface CommandReader {
 
-    List<RawCommand> read();
+    List<RawCommand> readCommands();
 
     void addCommand(RawCommand command);
 }

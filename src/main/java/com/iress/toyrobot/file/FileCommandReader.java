@@ -1,20 +1,20 @@
 package com.iress.toyrobot.file;
 
 import com.iress.toyrobot.common.RawCommand;
-import com.iress.toyrobot.common.Reader;
+import com.iress.toyrobot.common.CommandReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileReader implements Reader {
+public class FileCommandReader implements CommandReader {
 
     private List<RawCommand> commands;
 
-    FileReader() {
+    FileCommandReader() {
         commands = new ArrayList<>();
     }
 
     @Override
-    public List<RawCommand> read() {
+    public List<RawCommand> readCommands() {
         return this.commands;
     }
 
