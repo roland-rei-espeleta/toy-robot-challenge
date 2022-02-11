@@ -14,11 +14,11 @@ public class MoveCommand extends BaseCommand {
     public void execute(Robot robot, Table table) {
 
         if(robot.isPlaced()) {
-            Position curr_position = new Position(robot.getPosition().getX(), robot.getPosition().getY(), robot.getPosition().getDirection());
-            curr_position.getDirection().move(curr_position);
-            if(table.isValidAction(curr_position)) {
+            Position currentPosition = new Position(robot.getPosition().getX(), robot.getPosition().getY(), robot.getPosition().getDirection());
+            currentPosition.getDirection().move(currentPosition);
+            if(table.isValidAction(currentPosition)) {
                 success();
-                robot.setPosition(curr_position);
+                robot.setPosition(currentPosition);
             } else {
                 error();
                 System.out.println("Robot will fall off with the move command!");

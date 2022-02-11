@@ -40,7 +40,8 @@ public class Position {
     }
 
     /**
-     * Update the direction of the current position based on the current direction ( LEFT )
+     * Ordered Direction is based on cardinal order ( e.g NORTH, EAST, SOUTH ... )
+     * decrement the index of current direction to get the updated direction
      * @return Position
      */
     public Position turnLeft() {
@@ -50,7 +51,8 @@ public class Position {
     }
 
     /**
-     * Update the direction of the current position based on the current direction ( RIGHT )
+     * Ordered Direction is based on cardinal order ( e.g NORTH, EAST, SOUTH ... )
+     * increment the index of current direction to get the updated direction
      * @return Position
      */
     public Position turnRight() {
