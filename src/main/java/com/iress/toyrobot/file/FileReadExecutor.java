@@ -1,7 +1,7 @@
 package com.iress.toyrobot.file;
 
-import com.iress.toyrobot.common.CommandExecutor;
 import com.iress.toyrobot.common.CommandLoader;
+import com.iress.toyrobot.common.CommandReader;
 import com.iress.toyrobot.common.ReaderExecutor;
 import com.iress.toyrobot.common.exceptions.ToyRobotException;
 import com.iress.toyrobot.file.exceptions.FileReadException;
@@ -21,14 +21,8 @@ public class FileReadExecutor implements ReaderExecutor {
     }
 
     @Override
-    public void execute() throws ToyRobotException {
-        CommandExecutor commandExecutor = new CommandExecutor(getReader().readCommands());
-        commandExecutor.execute();
-    }
-
-    @Override
-    public FileCommandReader getReader() {
-        FileCommandReader fileReader = new FileCommandReader();
+    public CommandReader getCommandReader() {
+        CommandReader fileReader = new FileCommandReader();
         String filename;
         System.out.print("Enter commands filename : ");
         filename = getFileName();
@@ -49,7 +43,7 @@ public class FileReadExecutor implements ReaderExecutor {
         }
     }
 
-    private void readFile(FileCommandReader fileReader, String filename) throws ToyRobotException {
+    private void readFile(CommandReader fileReader, String filename) throws ToyRobotException {
 
         try {
             CommandLoader loader = new FileCommandLoader(fileReader, filename);

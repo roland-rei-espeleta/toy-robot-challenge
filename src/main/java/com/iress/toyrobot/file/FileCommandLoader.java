@@ -1,6 +1,7 @@
 package com.iress.toyrobot.file;
 
 import com.iress.toyrobot.common.CommandLoader;
+import com.iress.toyrobot.common.CommandReader;
 import com.iress.toyrobot.common.RawCommand;
 import com.iress.toyrobot.file.exceptions.FileReadException;
 
@@ -18,11 +19,11 @@ import java.net.URL;
  */
 public class FileCommandLoader implements CommandLoader {
 
-    private final FileCommandReader fileReader;
+    private final CommandReader fileReader;
 
     private final String fileName;
 
-    public FileCommandLoader(FileCommandReader fileReader, String fileName) {
+    public FileCommandLoader(CommandReader fileReader, String fileName) {
         this.fileReader = fileReader;
         this.fileName = fileName;
     }
