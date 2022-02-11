@@ -1,6 +1,7 @@
 package com.iress.toyrobot.common.commands;
 
 import com.iress.toyrobot.common.*;
+import com.iress.toyrobot.common.domain.Robot;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

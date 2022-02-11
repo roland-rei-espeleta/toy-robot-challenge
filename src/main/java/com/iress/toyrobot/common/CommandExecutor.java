@@ -5,6 +5,8 @@ import java.util.stream.Collectors;
 
 import com.iress.toyrobot.common.commands.BaseCommand;
 import com.iress.toyrobot.common.commands.CommandParser;
+import com.iress.toyrobot.common.domain.Robot;
+import com.iress.toyrobot.common.domain.Table;
 
 public class CommandExecutor {
 

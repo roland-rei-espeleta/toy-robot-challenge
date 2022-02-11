@@ -2,7 +2,7 @@ package com.iress.toyrobot.common.commands;
 
 import com.iress.toyrobot.common.CommandTestHelper;
 import com.iress.toyrobot.common.Direction;
-import com.iress.toyrobot.common.Robot;
+import com.iress.toyrobot.common.domain.Robot;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

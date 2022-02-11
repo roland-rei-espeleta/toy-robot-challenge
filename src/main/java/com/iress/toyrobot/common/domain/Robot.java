@@ -1,4 +1,6 @@
-package com.iress.toyrobot.common;
+package com.iress.toyrobot.common.domain;
+
+import com.iress.toyrobot.common.Position;
 
 public class Robot {
 

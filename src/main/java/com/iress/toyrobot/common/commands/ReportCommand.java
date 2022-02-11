@@ -1,7 +1,7 @@
 package com.iress.toyrobot.common.commands;
 
-import com.iress.toyrobot.common.Robot;
-import com.iress.toyrobot.common.Table;
+import com.iress.toyrobot.common.domain.Robot;
+import com.iress.toyrobot.common.domain.Table;
 
 public class ReportCommand extends BaseCommand {
 

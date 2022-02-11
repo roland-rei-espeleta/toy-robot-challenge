@@ -4,7 +4,10 @@ import com.iress.toyrobot.common.exceptions.ToyRobotException;
 
 public interface ReaderExecutor {
 
-    CommandReader getReader();
+    CommandReader getCommandReader();
 
-    void execute() throws ToyRobotException;
+    default void execute() throws ToyRobotException{
+        CommandExecutor commandExecutor = new CommandExecutor(getCommandReader().readCommands());
+        commandExecutor.execute();
+    }
 }

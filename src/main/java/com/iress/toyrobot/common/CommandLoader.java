@@ -11,6 +11,6 @@ import java.io.IOException;
  */
 public interface CommandLoader {
 
-    public void addCommands() throws IOException;
+    void addCommands() throws IOException;
 
 }

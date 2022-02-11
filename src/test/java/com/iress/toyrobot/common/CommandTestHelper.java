@@ -1,5 +1,7 @@
 package com.iress.toyrobot.common;
 
+import com.iress.toyrobot.common.domain.Robot;
+import com.iress.toyrobot.common.domain.Table;
 import org.junit.jupiter.api.Assertions;
 
 public class CommandTestHelper {
